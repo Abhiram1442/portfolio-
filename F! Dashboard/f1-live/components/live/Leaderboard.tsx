@@ -11,13 +11,22 @@ import { Trophy, Zap } from 'lucide-react';
 
 interface LeaderboardProps {
   data: LiveRaceData;
+  onSelectDriver?: (driver: typeof MOCK_DRIVERS[string]) => void;
 }
 
-export function Leaderboard({ data }: LeaderboardProps) {
+export function Leaderboard({ data, onSelectDriver }: LeaderboardProps) {
   const [selectedDriver, setSelectedDriver] = useState<string | null>(null);
 
   const selectedPosition = data.positions.find(p => p.driverId === selectedDriver);
   const selectedDriverData = selectedDriver ? MOCK_DRIVERS[selectedDriver] : null;
+
+  const handleRowClick = (driverId: string) => {
+    const next = selectedDriver === driverId ? null : driverId;
+    setSelectedDriver(next);
+    if (next && MOCK_DRIVERS[next]) {
+      onSelectDriver?.(MOCK_DRIVERS[next]);
+    }
+  };
 
   return (
     <div className="flex flex-col lg:flex-row gap-4">
@@ -37,9 +46,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
               pos={pos}
               fastestLapDriver={data.fastestLap?.driverId}
               isSelected={selectedDriver === pos.driverId}
-              onClick={() => setSelectedDriver(
-                selectedDriver === pos.driverId ? null : pos.driverId
-              )}
+              onClick={() => handleRowClick(pos.driverId)}
             />
           ))}
         </div>

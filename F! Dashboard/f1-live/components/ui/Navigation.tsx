@@ -23,9 +23,9 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center h-14 gap-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1.5 shrink-0">
-            <span className="text-[#e10600] font-black text-xl tracking-tight">F1</span>
-            <span className="font-bold text-white text-xl tracking-tight">LIVE</span>
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            <span className="text-[#e10600] font-black text-xl tracking-tight">WILTZ</span>
+            <span className="font-extrabold text-white text-base tracking-wider bg-white/10 px-2 py-0.5 rounded border border-white/10">F1 LIVE</span>
           </Link>
 
           {/* Desktop Nav */}

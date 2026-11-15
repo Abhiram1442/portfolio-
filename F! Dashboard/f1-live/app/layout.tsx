@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'F1 LIVE — Everything happening on the track, live.',
-  description: 'Live Formula 1 race dashboard. Real-time leaderboard, lap times, pit stops, standings and more.',
-  keywords: ['Formula 1', 'F1', 'live', 'race', 'timing', 'leaderboard'],
+  title: 'Wiltz F1 Live — Live Formula 1 Race Dashboard',
+  description: 'Wiltz F1 Live: Real-time leaderboard, virtual track tracking, live scores, lap times, pit stops, and smart race calendar.',
+  keywords: ['Formula 1', 'F1', 'Wiltz', 'live', 'race', 'timing', 'leaderboard', 'virtual track'],
   openGraph: {
-    title: 'F1 LIVE',
+    title: 'Wiltz F1 Live',
     description: 'Everything happening on the track, live.',
     type: 'website',
   },
