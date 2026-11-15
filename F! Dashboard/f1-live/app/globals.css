@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --f1-red: #e10600;
+  --f1-dark: #0a0a0a;
+  --f1-card: #141414;
+  --f1-border: rgba(255, 255, 255, 0.08);
+  --f1-text-muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--f1-dark);
+  color: #ffffff;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* ── Scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e10600;
+}
+
+/* ── Custom utilities ────────────────────────────── */
+.text-f1-red {
+  color: var(--f1-red);
+}
+.bg-f1-red {
+  background-color: var(--f1-red);
+}
+.border-f1-red {
+  border-color: var(--f1-red);
+}
+.bg-f1-card {
+  background-color: var(--f1-card);
+}
+.border-f1 {
+  border-color: var(--f1-border);
+}
+
+/* Live pulse animation */
+.live-pulse {
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+/* Tyre dot */
+.tyre-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+/* Team color strip */
+.team-strip {
+  width: 3px;
+  height: 100%;
+  border-radius: 2px;
+}
+
+/* Position badge */
+.pos-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Leaderboard row hover ───────────────────────── */
+.leaderboard-row {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.leaderboard-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+.leaderboard-row.leader {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left-width: 2px;
+  border-left-color: #facc15;
+}
+
+/* ── Card styles ─────────────────────────────────── */
+.f1-card {
+  background-color: #141414;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+}
+
+/* ── Section header ──────────────────────────────── */
+.section-header {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* ── LIVE badge ──────────────────────────────────── */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  border-radius: 0.25rem;
+}
+
+/* ── Mock data notice ────────────────────────────── */
+.mock-notice {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-width: 1px;
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── Countdown digits ────────────────────────────── */
+.countdown-digit {
+  background-color: #1a1a1a;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  min-width: 72px;
+}

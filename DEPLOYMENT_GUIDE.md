@@ -60,7 +60,7 @@ We recommend **Vercel** or **Netlify** because they are free forever, lightning-
 
 ## 3. How to Connect Your Custom `.com` Domain
 
-To have an address like `https://www.yourname.com` or `https://yourname.com`:
+To have an address like `https://www.Abhiram.com` or `https://yourname.com`:
 
 ### Step 1: Purchase Your `.com` Domain
 If you don't already own a domain, buy one from any reliable registrar (costs ~$9 to $12 per year):
